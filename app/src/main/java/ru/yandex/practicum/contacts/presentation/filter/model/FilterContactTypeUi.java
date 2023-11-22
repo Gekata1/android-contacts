@@ -21,10 +21,12 @@ public class FilterContactTypeUi implements ListDiffInterface<FilterContactTypeU
     public boolean isSelected() {
         return selected;
     }
+
     @Override
     public boolean theSameAs(FilterContactTypeUi other) {
-        return this.contactType == other.contactType && this.selected == other.selected;
+        return this.getContactType() == other.getContactType();
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

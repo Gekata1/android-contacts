@@ -22,9 +22,10 @@ public class SortTypeUI implements ListDiffInterface<SortTypeUI> {
     public boolean isSelected() {
         return selected;
     }
+
     @Override
     public boolean theSameAs(SortTypeUI other) {
-        return this.sortType == other.sortType && this.selected == other.selected;
+        return this.getSortType() == other.getSortType();
     }
 
     @Override

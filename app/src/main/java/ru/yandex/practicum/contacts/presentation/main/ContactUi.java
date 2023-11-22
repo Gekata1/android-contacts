@@ -41,13 +41,12 @@ public class ContactUi implements ListDiffInterface<ContactUi> {
     public List<ContactType> getTypes() {
         return types;
     }
+
     @Override
     public boolean theSameAs(ContactUi other) {
-        return this.name.equals(other.name) &&
-                this.phone.equals(other.phone) &&
-                this.photo.equals(other.photo) &&
-                this.types.equals(other.types);
+        return this.hashCode() == other.hashCode();
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
